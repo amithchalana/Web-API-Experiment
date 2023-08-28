@@ -47,17 +47,17 @@ document.body.addEventListener('mouseenter',()=>{
 
 
 
-const timerId1 = setTimeout(() => {
-    console.log('time out executed');
-},3500);
+// const timerId1 = setTimeout(() => {
+//     console.log('time out executed');
+// },3500);
  
 
-const btnStopTimer = document.querySelector("#btnStopTimer1");
+// const btnStopTimer = document.querySelector("#btnStopTimer1");
 
-btnStopTimer.addEventListener('click',()=>{
-    clearTimeout(timerId1);
-    console.log('Timeout Stopped');
-});
+// btnStopTimer.addEventListener('click',()=>{
+//     clearTimeout(timerId1);
+//     console.log('Timeout Stopped');
+// });
 
 
 
