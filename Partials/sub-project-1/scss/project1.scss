@@ -1,0 +1,37 @@
+#cursor{
+    height: 75px;
+    width: 75px;
+    background-color:rgb(13, 13, 185);
+    border-radius: 100%;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    animation-name: wave;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    outline : 0 solid rgb(114, 130, 221) ;
+    transition: opacity 0.5s;
+
+}
+
+
+@keyframes wave {
+    form{
+        outline-width: 0 ;
+    }
+    
+    88%,to{
+        outline-width: 25px;
+        
+    }
+    
+}
+
+#btnStopTimer1{
+    background-color: rgb(161, 65, 41);
+    height: 40px;
+}
+
+
+
+
+
