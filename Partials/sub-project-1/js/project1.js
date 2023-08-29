@@ -6,9 +6,9 @@ addEventListener('mousemove',(eventData)=>{
     if(tmrId){
         clearTimeout(tmrId);
         tmrId=null ;
-        console.log('execute');
     }
-   cursor.style.opacity = 0.88 ;
+    cursor.style.opacity = 0.88 ;
+ 
     
     cursor.style.left = eventData.pageX + 'px' ;
     cursor.style.top = eventData.pageY + 'px' ;
@@ -16,19 +16,18 @@ addEventListener('mousemove',(eventData)=>{
     tmrId = setTimeout(() => {
         cursor.style.opacity = 0 ;
     }, 3000);
+    
+    
 });
 
 
 document.body.addEventListener("mouseleave",()=>{
-    cursor.style.visibility = 'hidden';
-    console.log('leave');
-   
+    cursor.style.opacity = 0 ;
 
 });
 
 document.body.addEventListener('mouseenter',()=>{
-    cursor.style.visibility = 'visible';
-    console.log('enter');
+    cursor.style.opacity = 0.88 ;
 
 });
 
