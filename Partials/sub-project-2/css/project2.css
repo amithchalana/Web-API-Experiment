@@ -1,0 +1,12 @@
+#box {
+  width: 80px;
+  height: 80px;
+  background-color: red;
+  position: relative; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/*# sourceMappingURL=project2.css.map */
