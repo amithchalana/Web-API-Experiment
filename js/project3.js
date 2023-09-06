@@ -1,7 +1,6 @@
 // const boxElm = document.getElementById('box');
 
 
-
 const vw = innerWidth-50;
 const vh = innerHeight-50 ; 
 
@@ -45,6 +44,21 @@ class Box {
         this.#elm.style.top = `${this.#elm.offsetTop + this.#dy}px`  ;  
     }
 
+    checkCollisionWithCursor(){
+        const cursorRect = cursor.getBoundingClientRect();
+        const boxReact = this.#elm.getBoundingClientRect();
+        if(
+            cursorRect.top < boxReact.bottom &&
+            cursorRect.bottom > boxReact.top &&
+            cursorRect.right > boxReact.left && 
+            cursorRect.left < boxReact.right
+            
+        ){
+            this.#dx = -this.#dx ;
+            this.#dy = -this.#dy ;
+        }
+    }
+
 }
 
 /* create element in js  */
@@ -86,6 +100,7 @@ setInterval(()=>{
 
     boxList.forEach(element => {
         element.move();
+        element.checkCollisionWithCursor();
     });
     // box1.move();
     // box2.move();
